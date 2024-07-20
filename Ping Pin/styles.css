@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+canvas {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: radial-gradient(circle, #2a5298, #1e3c72);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.scoreboard {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.scoreboard .player, .scoreboard .computer {
+    display: flex;
+    align-items: center;
+}
+
+.scoreboard .player::before, .scoreboard .computer::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.scoreboard .player::before {
+    background-color: #ff5722;
+}
+
+.scoreboard .computer::before {
+    background-color: #3f51b5;
+}
